@@ -1,0 +1,796 @@
+{
+  "@context": {
+    "@base": "http://dicits.ugr.es/linkeddata/tswf-schema/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "TSAnalysis",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Experiment"
+      },
+      "hasInput": {
+        "@id": "hasInput"
+      },
+      "performs": {
+        "@id": "performs"
+      }
+    },
+    {
+      "@id": "performs",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "TSAnalysis"
+      },
+      "rangeIncludes": {
+        "@id": "PredictiveModel"
+      }
+    },
+    {
+      "@id": "PredictiveModel",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "hasMLAnalysis": {
+        "@id": "hasMLAnalysis"
+      },
+      "hasRegressionAn": {
+        "@id": "hasReressionAn"
+      },
+      "hasTSAn": {
+        "@id": "hasTSAn"
+      }
+    },
+    {
+      "@id": "MLAnalysis",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "PredictiveModel"
+      }
+    },
+    {
+      "@id": "RegressionAnalysis",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "PredictiveModel"
+      }
+    },
+    {
+      "@id": "TimeSeriesModelling",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "PredictiveModel"
+      }
+    },
+    {
+      "@id": "ETS",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TimeSeriesModelling"
+      }
+    },
+    {
+      "@id": "ARIMA",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TimeSeriesModelling"
+      }
+    },
+    {
+      "@id": "ARIMAX",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TimeSeriesModelling"
+      }
+    },
+    {
+      "@id": "SARIMAX",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TimeSeriesModelling"
+      }
+    },
+    {
+      "@id": "MARS",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "RegressionAnalysis"
+      }
+    },
+    {
+      "@id": "LASSO",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "RegressionAnalysis"
+      }
+    },
+    {
+      "@id": "AR",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "RegressionAnalysis"
+      }
+    },
+    {
+      "@id": "MLP",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "MLAnalysis"
+      }
+    },
+    {
+      "@id": "SVM",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "MLAnalysis"
+      }
+    },
+    {
+      "@id": "Experiment",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Study"
+      }
+    },
+    {
+      "@id": "Study",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": ""
+    },
+    {
+      "@id": "rangeIncludes",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "Property"
+      },
+      "rangeIncludes": {
+        "@id": "Class"
+      },
+      "rdfs:comment": "",
+      "rdfs:label": ""
+    },
+    {
+      "@id": "hasInput",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "Data"
+      },
+      "domainIncludes": {
+        "@id": "TSAnalysis"
+      }
+    },
+    {
+      "@id": "Data",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "entailsProcessing": {
+        "@id": "entailsProcessing"
+      },
+      "hasPlot": {
+        "@id": "hasPlot"
+      },
+      "hasInformationAnalysis": {
+        "@id": "hasInformationAnalysis"
+      },
+      "hasStationaryAnalysis": {
+        "@id": "hasStationaryAnalysis"
+      }
+    },
+    {
+      "@id": "hasInformationAnalysis",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "InformationAnalysis"
+      }
+    },
+    {
+      "@id": "AutoCorAnalysis",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "InformationAnalysis"
+      }
+    },
+    {
+      "@id": "PACF",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "AutoCorAnalysis"
+      }
+    },
+    {
+      "@id": "ACF",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "AutoCorAnalysis"
+      }
+    },
+    {
+      "@id": "TrendStudy",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "InformationAnalysis"
+      }
+    },
+    {
+      "@id": "Seasonality",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "InformationAnalysis"
+      }
+    },
+    {
+      "@id": "LagStudy",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Seasonality"
+      }
+    },
+    {
+      "@id": "SeasonalStudy",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Seasonality"
+      }
+    },
+    {
+      "@id": "hasPlot",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "TSVisualization"
+      }
+    },
+    {
+      "@id": "Differentiation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TSVisualization"
+      }
+    },
+    {
+      "@id": "PlotACF",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TSVisualization"
+      }
+    },
+    {
+      "@id": "STL",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TSVisualization"
+      }
+    },
+    {
+      "@id": "PlotPACF",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TSVisualization"
+      }
+    },
+    {
+      "@id": "PlotRegular",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TSVisualization"
+      }
+    },
+    {
+      "@id": "Decompose",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "TSVisualization"
+      }
+    },
+    {
+      "@id": "StatisticalTests",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "StationayAnalysis"
+      },
+      "shapingStationary": {
+        "@id": "shaphingStationary"
+      },
+      "shapingNormality": {
+        "@id": "shapingNormality"
+      },
+      "shapingRandom": {
+        "@id": "shapingRandom"
+      },
+      "shapingNonLinear": {
+        "@id": "shapingNonLinear"
+      }
+    },
+    {
+      "@id": "shaphingStationary",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "Stationary"
+      }
+    },
+    {
+      "@id": "shaphingNormality",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "Normality"
+      },
+      "domainIncludes": {
+        "@id": "StatisticalTests"
+      }
+    },
+    {
+      "@id": "shaphingRandom",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "Randomness"
+      },
+      "domainIncludes": {
+        "@id": "StatisticalTests"
+      }
+    },
+    {
+      "@id": "shaphingNonLinear",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "NonLinear"
+      },
+      "domainIncludes": {
+        "@id": "StatisticalTests"
+      }
+    },
+    {
+      "@id": "StatisticalTests",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "StationayAnalysis"
+      },
+      "domainIncludes": {
+        "@id": "StatisticalTests"
+      }
+    },
+    {
+      "@id": "KwiatkowskiPhillips",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Stationary"
+      }
+    },
+    {
+      "@id": "DickeyFuller",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Stationary"
+      }
+    },
+    {
+      "@id": "JarqueBera",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Normality"
+      }
+    },
+    {
+      "@id": "ShapiroWilk",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Normality"
+      }
+    },
+    {
+      "@id": "LjungBox",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Randomness"
+      }
+    },
+    {
+      "@id": "BoxPierce",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Randomness"
+      }
+    },
+    {
+      "@id": "Terasvirta",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "NonLinear"
+      }
+    },
+    {
+      "@id": "entailsProcessing",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rangeIncludes": {
+        "@id": "Preprocessing"
+      }
+    },
+    {
+      "@id": "Preprocessing",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "hasMethod": {
+        "@id": "PreprocessingMethods"
+      },
+      "domainIncludes": {
+        "@id": "Data"
+      }
+    },
+    {
+      "@id": "Smoothing",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "PreprocessingMethods"
+      }
+    },
+    {
+      "@id": "NoiseReduction",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "PreprocessingMethods"
+      }
+    },
+    {
+      "@id": "Scale",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "PreprocessingMethods"
+      }
+    },
+    {
+      "@id": "t-student",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Scale"
+      }
+    },
+    {
+      "@id": "std-score",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Scale"
+      }
+    },
+    {
+      "@id": "std-moment",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Scale"
+      }
+    },
+    {
+      "@id": "Outliers",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "PreprocessingMethods"
+      }
+    },
+    {
+      "@id": "Additive",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Outliers"
+      }
+    },
+    {
+      "@id": "LevelShift",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Outliers"
+      }
+    },
+    {
+      "@id": "SeasonalLevelShift",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Outliers"
+      }
+    },
+    {
+      "@id": "TemporaryChange",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Outliers"
+      }
+    },
+    {
+      "@id": "Innovation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Outliers"
+      }
+    },
+    {
+      "@id": "SpectralAnalysis",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "PreprocessingMethods"
+      }
+    },
+    {
+      "@id": "DWT",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SpectralAnalysis"
+      }
+    },
+    {
+      "@id": "DFT",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SpectralAnalysis"
+      }
+    },
+    {
+      "@id": "Wavelets",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SpectralAnalysis"
+      }
+    },
+    {
+      "@id": "NSE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SpectralAnalysis"
+      }
+    },
+    {
+      "@id": "Lagged",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SpectralAnalysis"
+      }
+    },
+    {
+      "@id": "Optimun",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SpectralAnalysis"
+      }
+    },
+    {
+      "@id": "Linear",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SpectralAnalysis"
+      }
+    },
+    {
+      "@id": "Imputation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "PreprocessingMethods"
+      }
+    },
+    {
+      "@id": "Mean",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Imputation"
+      }
+    },
+    {
+      "@id": "LOCF",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Imputation"
+      }
+    },
+    {
+      "@id": "Interpolation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Imputation"
+      }
+    },
+    {
+      "@id": "SeasonaDecom",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Imputation"
+      }
+    },
+    {
+      "@id": "MovingAverage",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Imputation"
+      }
+    },
+    {
+      "@id": "KalmanSmoothing",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Imputation"
+      }
+    },
+    {
+      "@id": "MissingDataMod",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Imputation"
+      }
+    },
+    {
+      "@id": "Property",
+      "@type": "rdfs:Class",
+      "http://www.w3.org/2002/07/owl#equivalentClass": {
+        "@id": "rdf:Property"
+      },
+      "rdfs:comment": "A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.",
+      "rdfs:label": "Property"
+    },
+    {
+      "@id": "domainIncludes",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "Property"
+      },
+      "rangeIncludes": {
+        "@id": "Class"
+      },
+      "rdfs:comment": "Relates a property to a class that is (one of) the type(s) the property is expected to be used on.",
+      "rdfs:label": "domainIncludes"
+    },
+    {
+      "@id": "Class",
+      "@type": "rdfs:Class",
+      "http://www.w3.org/2002/07/owl#equivalentClass": {
+        "@id": "rdfs:Class"
+      },
+      "rdfs:comment": "A class, also often called a 'Type'; equivalent to rdfs:Class.",
+      "rdfs:label": "Class"
+    }
+  ]
+}
