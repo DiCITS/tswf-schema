@@ -313,6 +313,92 @@
       "rdfs:label": "",
       "rdfs:subClassOf": {
         "@id": "EvaluationMeasure"
+      },
+      "hasMeasures" : [
+        {
+          "@id" : "InternalMeasures"
+        },
+        {
+          "@id" : "StabilityMeasures"
+        },
+        {
+          "@id" : "Bio"
+        }
+      ]
+    },
+    {
+
+    },
+    {
+      "@id": "Connectivity",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "InternalMeasures"
+      }
+    },
+    {
+      "@id": "Silhouette W",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "InternalMeasures"
+      }
+    },
+    {
+      "@id": "Dunm Index",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "InternalMeasures"
+      }
+    },
+    {
+      "@id": "APN",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "StabilityMeasures"
+      }
+    },
+    {
+      "@id": "AD/ADM",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "StabilityMeasures"
+      }
+    },
+    {
+      "@id": "FOM",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "StabilityMeasures"
+      }
+    },
+    {
+      "@id": "BSI",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Bio"
+      }
+    },
+    {
+      "@id": "BHI",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "Bio"
       }
     },
     {
