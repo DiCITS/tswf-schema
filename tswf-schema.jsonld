@@ -34,7 +34,7 @@
       },
       "rangeIncludes": {
         "@id": "EvaluationMeasure"
-      }     
+      }
     },
     {
       "@id": "EvaluationMeasure",
@@ -103,6 +103,102 @@
       "rdfs:label": "",
       "rdfs:subClassOf": {
         "@id": "EvaluationMeasure"
+      },
+      "hasBinaryMeasure": {
+        "@id": "hasBinaryMeasure"
+      },
+      "hasMCMeasure": {
+        "@id": "hasMCMeasure"
+      }
+    },
+    {
+      "@id": "hasBinaryMeasure",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "ClassificationAccuracy"
+      },
+      "rangeIncludes": {
+        "@id": "Binary"
+      }
+    },
+    {
+      "@id": "hasMCMeasure",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "ClassificationAccuracy"
+      },
+      "rangeIncludes": {
+        "@id": "Multiclass"
+      }
+    },
+    {
+      "@id": "SensitivitySpecificity",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": [{
+        "@id": "Binary"
+      },
+      {
+        "@id": "Multiclass"
+      }]
+    },
+    {
+      "@id": "F1-Score",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SensitivitySpecificity"
+      }
+    },
+    {
+      "@id": "ROC",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SensitivitySpecificity"
+      }
+    },
+    {
+      "@id": "Accuracy",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SensitivitySpecificity"
+      }
+    },
+    {
+      "@id": "Informedness",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SensitivitySpecificity"
+      }
+    },
+    {
+      "@id": "Markedned",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SensitivitySpecificity"
+      }
+    },
+    {
+      "@id": "ConfusionMatrix",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SensitivitySpecificity"
       }
     },
     {
@@ -127,7 +223,7 @@
       },
       "rangeIncludes": {
         "@id": "ErrorMeasures"
-      }  
+      }
     },
     {
       "@id": "ErrorMeasures",
