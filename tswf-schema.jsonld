@@ -130,6 +130,87 @@
       }  
     },
     {
+      "@id": "ErrorMeasures",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "ForecastAccuracy"
+      }
+    },
+    {
+      "@id": "MAE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
+      "@id": "RelMAE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
+      "@id": "MSE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
+      "@id": "RMSE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
+      "@id": "MAPE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
+      "@id": "sMAPE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
+      "@id": "wMAPE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
+      "@id": "MASE",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "ErrorMeasures"
+      }
+    },
+    {
       "@id": "ClusteringAccuracy",
       "@type": "rdfs:Class",
       "rdfs:comment": "",
