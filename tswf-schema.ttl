@@ -1,0 +1,694 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/TSAnalysis>
+  a rdfs:Class ;
+  rdfs:comment "Core class that defines a complete analysis for one/multiple time series. This component contains the key elements for the description of an analysis and experimentation with this type of data."^^xsd:string ;
+  rdfs:label "TSAnalysis"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Experiment> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Experiment>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Study> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/hasOutput>
+  a rdf:Property ;
+  rdfs:comment "Property defines what the results of a time series data analysis are. A TSAnalysis output can be any output component defined in the schema related to a time-series data analysis study."^^xsd:string ;
+  rdfs:label "hasOutput"^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/EvaluationMeasure>
+  a rdf:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SimilarityMeasures>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/EvaluationMeasure> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/LCSS>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SimilarityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/FrechetDistance>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SimilarityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/DTW>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SimilarityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/EditDistance>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SimilarityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Jaccard>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SimilarityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ClassificationAccuracy>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/EvaluationMeasure> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/hasBinaryMeasure>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/hasMCMeasure>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SensitivitySpecificity>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Binary>, <http://dicits.ugr.es/linkeddata/tswf-schema/Multiclass> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/F1-Score>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SensitivitySpecificity> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ROC>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SensitivitySpecificity> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Accuracy>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SensitivitySpecificity> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Informedness>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SensitivitySpecificity> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Markedned>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SensitivitySpecificity> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ConfusionMatrix>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SensitivitySpecificity> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ForecastAccuracy>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/EvaluationMeasure> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/hasMeasures>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MAE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/RelMAE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MSE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/RMSE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MAPE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/sMAPE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/wMAPE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MASE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/ErrorMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ClusteringAccuracy>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/EvaluationMeasure> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Connectivity>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/InternalMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Silhouette W>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/InternalMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Dunm Index>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/InternalMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/APN>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/StabilityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/AD/ADM>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/StabilityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/FOM>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/StabilityMeasures> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/BSI>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Bio> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/BHI>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Bio> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ResidualsAnalysis>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/EvaluationMeasure> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/performs>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/PredictiveModel>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MLAnalysis>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/RegressionAnalysis>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/TimeSeriesModelling>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ETS>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TimeSeriesModelling> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ARIMA>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TimeSeriesModelling> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ARIMAX>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TimeSeriesModelling> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SARIMAX>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TimeSeriesModelling> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MARS>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/RegressionAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/LASSO>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/RegressionAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/AR>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/RegressionAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MLP>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/MLAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SVM>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/MLAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Study>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/rangeIncludes>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/hasInput>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Data>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/hasInformationAnalysis>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/AutoCorAnalysis>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/InformationAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/PACF>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/AutoCorAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ACF>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/AutoCorAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/TrendStudy>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/InformationAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Seasonality>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/InformationAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/LagStudy>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Seasonality> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SeasonalStudy>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Seasonality> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/hasPlot>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Differentiation>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TSVisualization> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/PlotACF>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TSVisualization> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/STL>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TSVisualization> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/PlotPACF>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TSVisualization> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/PlotRegular>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TSVisualization> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Decompose>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/TSVisualization> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/StatisticalTests>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/StationayAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/shaphingStationary>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/shaphingNormality>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/shaphingRandom>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/shaphingNonLinear>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/KwiatkowskiPhillips>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Stationary> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/DickeyFuller>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Stationary> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/JarqueBera>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Normality> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/ShapiroWilk>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Normality> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/LjungBox>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Randomness> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/BoxPierce>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Randomness> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Terasvirta>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/NonLinear> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/entailsProcessing>
+  a rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Preprocessing>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Smoothing>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/PreprocessingMethods> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/NoiseReduction>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/PreprocessingMethods> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Scale>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/PreprocessingMethods> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/t-student>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Scale> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/std-score>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Scale> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/std-moment>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Scale> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Outliers>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/PreprocessingMethods> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Additive>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Outliers> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/LevelShift>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Outliers> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SeasonalLevelShift>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Outliers> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/TemporaryChange>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Outliers> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Innovation>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Outliers> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/PreprocessingMethods> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/DWT>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/DFT>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Wavelets>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/NSE>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Lagged>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Optimun>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Linear>
+  a rdfs:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/SpectralAnalysis> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Imputation>
+  a rdfs:Class ;
+  rdfs:comment "Class containing functions and algorithms that allow to execute on some data certain imputation of values of different type."^^xsd:string ;
+  rdfs:label "Imputation"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/PreprocessingMethods> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Mean>
+  a rdfs:Class ;
+  rdfs:comment "Imputation function that allows you to define an imputation of type Mean."^^xsd:string ;
+  rdfs:label "Mean"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Imputation> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/LOCF>
+  a rdfs:Class ;
+  rdfs:comment "Imputation function that allows you to define an imputation of type  LOCF."^^xsd:string ;
+  rdfs:label "LOCF"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Imputation> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Interpolation>
+  a rdfs:Class ;
+  rdfs:comment "Imputation function that allows you to define an imputation of type Interpolation."^^xsd:string ;
+  rdfs:label "Interpolation"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Imputation> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/SeasonaDecom>
+  a rdfs:Class ;
+  rdfs:comment "Imputation function that allows you to define an imputation of type Seasona decomposition."^^xsd:string ;
+  rdfs:label "SeasonaDecom"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Imputation> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MovingAverage>
+  a rdfs:Class ;
+  rdfs:comment "Imputation function that allows you to define an imputation of type Moving average."^^xsd:string ;
+  rdfs:label "MovingAverage"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Imputation> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/KalmanSmoothing>
+  a rdfs:Class ;
+  rdfs:comment "Imputation function that allows you to define an imputation of type KalmanSmoothing."^^xsd:string ;
+  rdfs:label "KalmanSmoothing"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Imputation> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/MissingDataMod>
+  a rdfs:Class ;
+  rdfs:comment "Imputation function that allows you to define an imputation of type Missing Data Model"^^xsd:string ;
+  rdfs:label "MissingDataMod"^^xsd:string ;
+  rdfs:subClassOf <http://dicits.ugr.es/linkeddata/tswf-schema/Imputation> .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Property>
+  a rdfs:Class ;
+  rdfs:comment "A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property."^^xsd:string ;
+  rdfs:label "Property"^^xsd:string ;
+  owl:equivalentClass rdf:Property .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/domainIncludes>
+  a rdf:Property ;
+  rdfs:comment "Relates a property to a class that is (one of) the type(s) the property is expected to be used on."^^xsd:string ;
+  rdfs:label "domainIncludes"^^xsd:string .
+
+<http://dicits.ugr.es/linkeddata/tswf-schema/Class>
+  a rdfs:Class ;
+  rdfs:comment "A class, also often called a 'Type'; equivalent to rdfs:Class."^^xsd:string ;
+  rdfs:label "Class"^^xsd:string ;
+  owl:equivalentClass rdfs:Class .
