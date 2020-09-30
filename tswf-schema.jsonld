@@ -17,8 +17,134 @@
       "hasInput": {
         "@id": "hasInput"
       },
+      "hasOutput": {
+        "@id": "hasOutput"
+      },
       "performs": {
         "@id": "performs"
+      }
+    },
+    {
+      "@id": "hasOutput",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "TSAnalysis"
+      },
+      "rangeIncludes": {
+        "@id": "EvaluationMeasure"
+      }     
+    },
+    {
+      "@id": "EvaluationMeasure",
+      "@type": "rdf:Class",
+      "rdfs:comment": "",
+      "rdfs:label": ""
+    },
+    {
+      "@id": "SimilarityMeasures",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "EvaluationMeasure"
+      }
+    },
+    {
+      "@id": "LCSS",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SimilarityMeasures"
+      }
+    },
+    {
+      "@id": "FrechetDistance",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SimilarityMeasures"
+      }
+    },
+    {
+      "@id": "DTW",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SimilarityMeasures"
+      }
+    },
+    {
+      "@id": "EditDistance",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SimilarityMeasures"
+      }
+    },
+    {
+      "@id": "Jaccard",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "SimilarityMeasures"
+      }
+    },
+    {
+      "@id": "ClassificationAccuracy",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "EvaluationMeasure"
+      }
+    },
+    {
+      "@id": "ForecastAccuracy",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "EvaluationMeasure"
+      },
+      "hasMeasures": {
+        "@id": "hasMeasures"
+      }
+    },
+    {
+      "@id": "hasMeasures",
+      "@type": "rdf:Property",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "domainIncludes": {
+        "@id": "ForecastAccuracy"
+      },
+      "rangeIncludes": {
+        "@id": "ErrorMeasures"
+      }  
+    },
+    {
+      "@id": "ClusteringAccuracy",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "EvaluationMeasure"
+      }
+    },
+    {
+      "@id": "ResidualsAnalysis",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "",
+      "rdfs:label": "",
+      "rdfs:subClassOf": {
+        "@id": "EvaluationMeasure"
       }
     },
     {
