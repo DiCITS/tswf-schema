@@ -9,8 +9,8 @@
     {
       "@id": "TSAnalysis",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Core class that defines a complete analysis for one/multiple time series. This component contains the key elements for the description of an analysis and experimentation with this type of data.",
+      "rdfs:label": "TSAnalysis",
       "rdfs:subClassOf": {
         "@id": "Experiment"
       },
@@ -27,8 +27,8 @@
     {
       "@id": "hasOutput",
       "@type": "rdf:Property",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Property defines what the results of a time series data analysis are. A TSAnalysis output can be any output component defined in the schema related to a time-series data analysis study.",
+      "rdfs:label": "hasOutput",
       "domainIncludes": {
         "@id": "TSAnalysis"
       },
@@ -325,10 +325,7 @@
           "@id" : "Bio"
         }
       ]
-    },
-    {
-
-    },
+    },    
     {
       "@id": "Connectivity",
       "@type": "rdfs:Class",
@@ -1082,8 +1079,8 @@
     {
       "@id": "Imputation",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Class containing functions and algorithms that allow to execute on some data certain imputation of values of different type.",
+      "rdfs:label": "Imputation",
       "rdfs:subClassOf": {
         "@id": "PreprocessingMethods"
       }
@@ -1091,8 +1088,8 @@
     {
       "@id": "Mean",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Imputation function that allows you to define an imputation of type Mean.",
+      "rdfs:label": "Mean",
       "rdfs:subClassOf": {
         "@id": "Imputation"
       }
@@ -1100,8 +1097,8 @@
     {
       "@id": "LOCF",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Imputation function that allows you to define an imputation of type  LOCF.",
+      "rdfs:label": "LOCF",
       "rdfs:subClassOf": {
         "@id": "Imputation"
       }
@@ -1109,8 +1106,8 @@
     {
       "@id": "Interpolation",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Imputation function that allows you to define an imputation of type Interpolation.",
+      "rdfs:label": "Interpolation",
       "rdfs:subClassOf": {
         "@id": "Imputation"
       }
@@ -1118,8 +1115,8 @@
     {
       "@id": "SeasonaDecom",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Imputation function that allows you to define an imputation of type Seasona decomposition.",
+      "rdfs:label": "SeasonaDecom",
       "rdfs:subClassOf": {
         "@id": "Imputation"
       }
@@ -1127,8 +1124,8 @@
     {
       "@id": "MovingAverage",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Imputation function that allows you to define an imputation of type Moving average.",
+      "rdfs:label": "MovingAverage",
       "rdfs:subClassOf": {
         "@id": "Imputation"
       }
@@ -1136,8 +1133,8 @@
     {
       "@id": "KalmanSmoothing",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Imputation function that allows you to define an imputation of type KalmanSmoothing.",
+      "rdfs:label": "KalmanSmoothing",
       "rdfs:subClassOf": {
         "@id": "Imputation"
       }
@@ -1145,8 +1142,8 @@
     {
       "@id": "MissingDataMod",
       "@type": "rdfs:Class",
-      "rdfs:comment": "",
-      "rdfs:label": "",
+      "rdfs:comment": "Imputation function that allows you to define an imputation of type Missing Data Model",
+      "rdfs:label": "MissingDataMod",
       "rdfs:subClassOf": {
         "@id": "Imputation"
       }
